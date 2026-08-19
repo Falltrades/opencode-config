@@ -23,6 +23,7 @@ RUN apk add --no-cache \
         cargo \
         nodejs \
         npm \
+        strace \
         openjdk17-jre-headless
 
 RUN apk add --no-cache rustup \
@@ -32,6 +33,7 @@ RUN apk add --no-cache rustup \
     && rm -rf /root/.cargo /root/.rustup
 
 RUN cargo install --git https://github.com/rtk-ai/rtk --root /usr/local
+RUN cargo install dioxus-cli@0.7.9 --root /usr/local --locked
 RUN curl -sSLO https://github.com/pinterest/ktlint/releases/download/1.8.0/ktlint \
     && chmod a+x ktlint \
     && mv ktlint /usr/local/bin/ktlint
