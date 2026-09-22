@@ -2,11 +2,11 @@
   {
     "name": "rust",
     "build": {
-      "base": "ghcr.io/anomalyco/opencode:1.18.13",
+      "base": "ghcr.io/anomalyco/opencode:1.18.31",
       "context": "./docker/rust",
       "dockerfile": "./docker/rust/Dockerfile",
       "target": "build",
-      "tag": "1.1.0",
+      "tag": "1.1.1",
       "latest": true
     }
   }

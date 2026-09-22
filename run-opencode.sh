@@ -26,11 +26,11 @@
 
 set -euo pipefail
 
-IMAGE_NAME="ghcr.io/falltrades/opencode-config/rust:1.1.0"
-BASE_DIR="${HOME}/git/StellaSecret"
+IMAGE_NAME="ghcr.io/falltrades/opencode-config/rust:1.1.1"
+BASE_DIR="/data/git/StellaSecret"
 
 # Keep this list in sync with AGENTS.md's allowed project list.
-ALLOWED_PROJECTS=(CVGenerator TripMind GameTracker AsthmeTrack PeopleModeler SmartShoppingCalculator StellaSecret.github.io gdrive-appdata-browser)
+ALLOWED_PROJECTS=(CVGenerator TripMind GameTracker AsthmeTrack PeopleModeler SmartShoppingCalculator StellaSecret.github.io gdrive-appdata-browser SRE-audit)
 
 # --- resolve the directory this script lives in, regardless of cwd or alias ---
 SCRIPT_DIR="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && pwd)"
